@@ -3,7 +3,11 @@ const html_specialchars = require('html-specialchars');
 
 function signInVisitor(req, res) {
 
-    validator.validateVisitorSignIn(req.body);
+    if (validator.validateVisitorSignIn(req.body) === true) {
+        //store in db
+    } else {
+        //error message to user
+    };
 
     html_specialchars.escape(visitorInput);
 
