@@ -11,8 +11,6 @@ function signInVisitor(req, res) {
         //error message to user
     }
 
-
-
     let forename = req.body.forename;
     let surname = req.body.surname;
     let company = req.body.company;
@@ -22,14 +20,6 @@ function signInVisitor(req, res) {
         'data': '',
         'msg': 'visitor sign in failed'
     };
-
-    console.log('hi')
-
-    //call validationService on inputs
-    //returns bool
-    //happy path first
-    //convert chars
-    //call store visitor in visitors service (uses db service in visitors service)
 
     //once stored correctly:
     responseData.success = true;
