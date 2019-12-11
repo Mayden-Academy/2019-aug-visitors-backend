@@ -4,6 +4,10 @@ const html_specialchars = require('html-specialchars');
 
 function signInVisitor(req, res) {
 
+    req.body.forename = req.body.forename.trim();
+    req.body.surname = req.body.surname.trim();
+    req.body.company = req.body.company.trim();
+
     if (validator.validateVisitorSignIn(req.body) === true) {
         let forename =  html_specialchars.escape(req.body.forename);
         let surname = html_specialchars.escape(req.body.surname);
