@@ -5,15 +5,15 @@ const html_specialchars = require('html-specialchars');
 function signInVisitor(req, res) {
 
     if (validator.validateVisitorSignIn(req.body) === true) {
-        html_specialchars.escape(visitorInput);
+        let forename =  html_specialchars.escape(req.body.forename);
+        let surname = html_specialchars.escape(req.body.surname);
+        let company = html_specialchars.escape(req.body.company);
        //call visitor service
+        console.log('yay!')
     } else {
         //error message to user
+        console.log('boo!')
     }
-
-    let forename = req.body.forename;
-    let surname = req.body.surname;
-    let company = req.body.company;
 
     let responseData = {
         'success': false,
