@@ -1,11 +1,11 @@
 const validator = require('../Services/ValidationService');
-const dbService = require('../Services/DbService');
+const visitorsService = require('../Services/VisitorsService');
 const html_specialchars = require('html-specialchars');
 
 function signInVisitor(req, res) {
 
     if (validator.validateVisitorSignIn(req.body) === true) {
-        //store in db
+       //call visitor service
     } else {
         //error message to user
     }

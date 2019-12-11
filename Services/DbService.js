@@ -7,7 +7,6 @@ let connectToDB = async () => {
     let db = await Client.connect();
     db = Client.db(dbname);
     return db
-
 };
 
 module.exports = connectToDB;
