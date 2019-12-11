@@ -1,7 +1,12 @@
 const validator = require('../Services/ValidationService');
+const html_specialchars = require('html-specialchars');
 
 function signInVisitor(req, res) {
+
     validator.validateVisitorSignIn(req.body);
+
+    html_specialchars.escape(visitorInput);
+
     let forename = req.body.forename;
     let surname = req.body.surname;
     let company = req.body.company;

@@ -1,13 +1,10 @@
-var html_specialchars = require('html-specialchars');
-
 let validateVisitorSignIn = (visitorInput) => {
 
     checkInputProvided(visitorInput);
-    checkLength(visitorInput);
-    html_specialchars.escape(visitorInput);
-
-   //if there is post data then validate:
-    //call htmlspecialchars()
+    checkLength(visitorInput.forename.length);
+    checkLength(visitorInput.surname.length);
+    //if it's optional then it doesn't need a length though...
+    checkLength(visitorInput.company.length);
 };
 
 let checkInputProvided = (visitorInput) => {
@@ -16,9 +13,9 @@ let checkInputProvided = (visitorInput) => {
 
 };
 
-let checkLength = (visitorInput) => {
+let checkLength = (data) => {
 
-    return (visitorInput.forename.length >= 1 && visitorInput.forename.length <= 50 && visitorInput.surname.length >= 1 && visitorInput.surname.length <= 50 && visitorInput.company.length >= 1 && visitorInput.company.length <= 50)
+    return (data.length >= 1 && data.length <= 50);
 
 };
 
