@@ -8,6 +8,6 @@ let connectToDB = async () => {
     db = Client.db(dbname);
     return db
 
-}
+};
 
 module.exports = connectToDB;

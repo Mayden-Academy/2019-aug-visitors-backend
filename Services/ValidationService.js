@@ -18,6 +18,4 @@ let checkMaxLength= () => {
     return (data.length <= 50);
 };
 
-
-
 module.exports.validateVisitorSignIn = validateVisitorSignIn;

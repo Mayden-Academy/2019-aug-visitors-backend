@@ -1,4 +1,5 @@
 const validator = require('../Services/ValidationService');
+const dbService = require('../Services/DbService');
 const html_specialchars = require('html-specialchars');
 
 function signInVisitor(req, res) {
@@ -7,7 +8,7 @@ function signInVisitor(req, res) {
         //store in db
     } else {
         //error message to user
-    };
+    }
 
     html_specialchars.escape(visitorInput);
 
