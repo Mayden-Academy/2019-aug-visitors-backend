@@ -1,6 +1,6 @@
 const dbService = require('../Services/DbService');
 
-let storeVisitorInfo = (dbService) => {
-    dbService.connectToDB
+let storeVisitorInfo = async () => {
+    let db = await dbService()
 
 }

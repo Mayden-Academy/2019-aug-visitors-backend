@@ -5,12 +5,13 @@ const html_specialchars = require('html-specialchars');
 function signInVisitor(req, res) {
 
     if (validator.validateVisitorSignIn(req.body) === true) {
+        html_specialchars.escape(visitorInput);
        //call visitor service
     } else {
         //error message to user
     }
 
-    html_specialchars.escape(visitorInput);
+
 
     let forename = req.body.forename;
     let surname = req.body.surname;
