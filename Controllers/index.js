@@ -1,4 +1,7 @@
+const validator = require('../Services/ValidationService');
+
 function signInVisitor(req, res) {
+    validator.validateVisitorSignIn(req.body);
     let forename = req.body.forename;
     let surname = req.body.surname;
     let company = req.body.company;
@@ -9,10 +12,12 @@ function signInVisitor(req, res) {
         'msg': 'visitor sign in failed'
     };
 
+    console.log('hi')
+
     //call validationService on inputs
     //returns bool
     //happy path first
-    //convert chars 
+    //convert chars
     //call store visitor in visitors service (uses db service in visitors service)
 
     //once stored correctly:
@@ -21,3 +26,5 @@ function signInVisitor(req, res) {
 
     res.json(responseData);
 }
+
+module.exports.signInVisitor = signInVisitor;
