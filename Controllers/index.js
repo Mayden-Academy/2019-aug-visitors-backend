@@ -13,7 +13,7 @@ function signInVisitor(req, res) {
         let surname = html_specialchars.escape(req.body.surname);
         let company = html_specialchars.escape(req.body.company);
        //call visitor service
-        console.log('yay!')
+        console.log(surname)
     } else {
         //error message to user
         console.log('boo!')

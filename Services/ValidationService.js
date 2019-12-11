@@ -13,7 +13,7 @@ let checkLength = (data) => {
     return (data.length >= 1 && data.length <= 50);
 };
 
-let checkMaxLength= (data) => {
+let checkMaxLength = (data) => {
 
     return (data.length <= 50);
 };
