@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const DbConnector = require('./Services/DbService'); // require db service
+const DbConnector = require('./Services/DbService');
 const Controller = require('./Controllers/index');
 const cors = require('cors');
 const jsonParser = bodyParser.json();
