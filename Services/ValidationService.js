@@ -8,17 +8,14 @@ let validateVisitorSignIn = (visitorInput) => {
 };
 
 let checkInputProvided = (visitorInput) => {
-
     return (typeof visitorInput.forename == 'string' && typeof visitorInput.surname == 'string')
 };
 
 let checkLength = (data) => {
-
     return (data.length >= 1 && data.length <= 50);
 };
 
 let checkMaxLength = (data) => {
-
     return (data.length <= 50);
 };
 
