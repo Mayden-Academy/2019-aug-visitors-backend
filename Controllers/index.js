@@ -6,7 +6,7 @@ async function signInVisitor(req, res) {
     let responseData = {
         'success': false,
         'data': '',
-        'msg': 'visitor sign in failed'
+        'msg': 'Visitor registration failed, please try again. Forename and surname are required.'
     };
 
     req.body.forename = req.body.forename.trim();
