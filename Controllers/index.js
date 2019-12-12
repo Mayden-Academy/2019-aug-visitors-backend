@@ -31,4 +31,25 @@ async function signInVisitor(req, res) {
     res.json(responseData);
 }
 
+
+async function getCurrentVisitors(req, res) {
+    let responseData = {
+        'success': false,
+        'data': '',
+        'msg': 'Error'
+    };
+
+    try {
+        responseData.data = await visitorsService.getVisitors();
+        if (responseData.data.length > 0) {
+            responseData.success = true;
+            responseData.msg = 'current visitors returned';
+        }
+    } catch(e) {
+        responseData.msg = 'unexpected error';
+    }
+    res.json(responseData);
+}
+
 module.exports.signInVisitor = signInVisitor;
+module.exports.getCurrentVisitors = getCurrentVisitors;

@@ -11,4 +11,13 @@ let storeVisitorInfo = async (visitorObject) => {
     return false;
 }
 
+let getVisitors = async () => {
+    let db = await dbService();
+    let col = db.collection('visitors');
+    let dbResponse = await col.find().toArray();
+    return dbResponse;
+}
+
+
 module.exports.storeVisitorInfo = storeVisitorInfo;
+module.exports.getVisitors = getVisitors;
