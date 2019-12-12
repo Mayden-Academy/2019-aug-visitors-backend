@@ -10,4 +10,4 @@ app.use(cors());
 
 app.post('/visitors', jsonParser, Controller.signInVisitor);
 
-app.listen(port, () => console.log(`app listening on port ${port}`));
+app.listen(port);
