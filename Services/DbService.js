@@ -6,8 +6,7 @@ let connectToDB = async () => {
     const Client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
     let db = await Client.connect();
     db = Client.db(dbname);
-    return db
-
-}
+    return db;
+};
 
 module.exports = connectToDB;
