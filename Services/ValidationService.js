@@ -1,6 +1,10 @@
 let validateVisitorSignIn = (visitorInput) => {
 
-    return (checkInputProvided(visitorInput) && checkLength(visitorInput.forename) && checkLength(visitorInput.surname) && checkMaxLength(visitorInput.company));
+    return (checkInputProvided(visitorInput)
+        && checkLength(visitorInput.forename)
+        && checkLength(visitorInput.surname)
+        && checkMaxLength(visitorInput.company)
+    );
 };
 
 let checkInputProvided = (visitorInput) => {
